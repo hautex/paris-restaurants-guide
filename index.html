@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 des Restaurants du 2e Arrondissement de Paris</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap');
+        
+        :root {
+            --primary-color: #1a2639;
+            --secondary-color: #d4af37;
+            --light-color: #f5f5f5;
+            --dark-color: #333;
+            --accent-color: #c75146;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            background-image: linear-gradient(rgba(26, 38, 57, 0.9), rgba(26, 38, 57, 0.9)), url('images/paris-header.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .restaurants-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .restaurant-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .restaurant-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .restaurant-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .restaurant-content {
+            padding: 1.5rem;
+        }
+        
+        .restaurant-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .restaurant-cuisine {
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            background-color: rgba(199, 81, 70, 0.1);
+            border-radius: 4px;
+        }
+        
+        .restaurant-info {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+        
+        .restaurant-rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .stars {
+            color: var(--secondary-color);
+            margin-right: 0.5rem;
+        }
+        
+        .review-count {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .restaurant-review {
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 6px;
+            font-style: italic;
+            position: relative;
+        }
+        
+        .restaurant-review::before {
+            content: '"';
+            font-size: 3rem;
+            color: rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: -10px;
+            left: 5px;
+        }
+        
+        .review-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem 0;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+        
+        @media (max-width: 768px) {
+            .restaurants-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Top 10 des Restaurants du 2e Arrondissement de Paris</h1>
+        <p class="subtitle">Découvrez les meilleures adresses gastronomiques du cœur de Paris</p>
+    </header>
+    
+    <div class="container">
+        <p>Le 2e arrondissement de Paris, bien que le plus petit de la capitale, regorge de trésors gastronomiques. Entre les passages couverts, la Bourse et le quartier Montorgueil, vous y trouverez certains des restaurants les plus renommés de Paris. Voici notre sélection des 10 meilleures adresses selon les avis Google.</p>
+        
+        <div class="restaurants-grid">
+            <!-- Restaurant 1 -->
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('images/frenchie.jpg');"></div>
+                <div class="restaurant-content">
+                    <h2 class="restaurant-name">Frenchie</h2>
+                    <span class="restaurant-cuisine">Gastronomique Français</span>
+                    <p class="restaurant-info">5 Rue du Nil, 75002 Paris</p>
+                    <div class="restaurant-rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">4.5/5 (1380+ avis)</span>
+                    </div>
+                    <div class="restaurant-review">
+                        <p class="review-content">"Grégory Marchand's Frenchie stands like a lighthouse in the storm, a sure thing that we love to find again, that we love to rediscover. Une adresse incontournable du 2e arrondissement."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Restaurant 2 -->
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('images/daroco.jpg');"></div>
+                <div class="restaurant-content">
+                    <h2 class="restaurant-name">Daroco Bourse</h2>
+                    <span class="restaurant-cuisine">Italien</span>
+                    <p class="restaurant-info">6 Rue Vivienne, 75002 Paris</p>
+                    <div class="restaurant-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span class="review-count">4.2/5 (900+ avis)</span>
+                    </div>
+                    <div class="restaurant-review">
+                        <p class="review-content">"Un des environnements de restaurant les plus impressionnants et modernes de Paris. Les pizzas sont généreuses, fines avec des bords hauts, parfaitement cuites, moelleuses et légères."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Restaurant 3 -->
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('images/yamtcha.jpg');"></div>
+                <div class="restaurant-content">
+                    <h2 class="restaurant-name">Yam'Tcha</h2>
+                    <span class="restaurant-cuisine">Franco-asiatique</span>
+                    <p class="restaurant-info">121 Rue Saint-Honoré, 75001 Paris</p>
+                    <div class="restaurant-rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">4.5/5 (460+ avis)</span>
+                    </div>
+                    <div class="restaurant-review">
+                        <p class="review-content">"Une tiny kitchen Franco-asiatique aux Halles qui reste aussi branchée maintenant que lors de son ouverture en 2009. Une étoile Michelin bien méritée pour la cuisine d'Adeline Grattard."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Restaurant 4 -->
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('images/edgar.jpg');"></div>
+                <div class="restaurant-content">
+                    <h2 class="restaurant-name">Restaurant Edgar</h2>
+                    <span class="restaurant-cuisine">Bistronomique</span>
+                    <p class="restaurant-info">31 Rue d'Alexandrie, 75002 Paris</p>
+                    <div class="restaurant-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span class="review-count">4.0/5 (315+ avis)</span>
+                    </div>
+                    <div class="restaurant-review">
+                        <p class="review-content">"Edgar est le nouveau restaurant de Sentier, au cœur de la petite Egypte parisienne. Poissons, fruits de mer, huîtres tout en sirotant des cocktails en terrasse. C'est un peu le bonheur."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Restaurant 5 -->
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('images/drouant.jpg');"></div>
+                <div class="restaurant-content">
+                    <h2 class="restaurant-name">Drouant</h2>
+                    <span class="restaurant-cuisine">Gastronomique Français</span>
+                    <p class="restaurant-info">16 Rue Gaillon, 75002 Paris</p>
+                    <div class="restaurant-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span class="review-count">4.1/5 (450+ avis)</span>
+                    </div>
+                    <div class="restaurant-review">
+                        <p class="review-content">"Tous les produits étaient frais et savoureux, du pain de grande qualité. Le Drouant propose aux amateurs de gastronomie fine, un menu de saison dans une atmosphère accueillante et raffinée."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Restaurant 6 -->
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('images/lyonnais.jpg');"></div>
+                <div class="restaurant-content">
+                    <h2 class="restaurant-name">Aux Lyonnais</h2>
+                    <span class="restaurant-cuisine">Lyonnais</span>
+                    <p class="restaurant-info">32 Rue Saint-Marc, 75002 Paris</p>
+                    <div class="restaurant-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span class="review-count">4.0/5 (870+ avis)</span>
+                    </div>
+                    <div class="restaurant-review">
+                        <p class="review-content">"L'accueil est agréable et le service adorable sous la gouverne de la directrice Gabrielle Aguilo. Un véritable bouchon lyonnais à Paris, une des perles bistrotières du groupe Ducasse."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Restaurant 7 -->
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('images/ellsworth.jpg');"></div>
+                <div class="restaurant-content">
+                    <h2 class="restaurant-name">Ellsworth</h2>
+                    <span class="restaurant-cuisine">Franco-américain</span>
+                    <p class="restaurant-info">34 Rue de Richelieu, 75001 Paris</p>
+                    <div class="restaurant-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span class="review-count">4.3/5 (250+ avis)</span>
+                    </div>
+                    <div class="restaurant-review">
+                        <p class="review-content">"Un restaurant charmant avec une excellente cuisine au centre de Paris! Plats uniques et raffinés, atmosphère chaleureuse et personnel sympathique. Une cuisine contemporaine avec des ingrédients de marché bien sourcés."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Restaurant 8 -->
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('images/bougainville.jpg');"></div>
+                <div class="restaurant-content">
+                    <h2 class="restaurant-name">Le Bougainville</h2>
+                    <span class="restaurant-cuisine">Bistrot</span>
+                    <p class="restaurant-info">5 Rue de la Banque, 75002 Paris</p>
+                    <div class="restaurant-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span class="review-count">4.0/5 (240+ avis)</span>
+                    </div>
+                    <div class="restaurant-review">
+                        <p class="review-content">"Tout est bon, franc, généreux et sans détour. Au cœur de la Galerie Vivienne, un bistrot parisien où le temps semble s'être arrêté et où sont servis les grands classiques de la cuisine de bistrot."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Restaurant 9 -->
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('images/racines.jpg');"></div>
+                <div class="restaurant-content">
+                    <h2 class="restaurant-name">Racines</h2>
+                    <span class="restaurant-cuisine">Italien</span>
+                    <p class="restaurant-info">8 Passage des Panoramas, 75002 Paris</p>
+                    <div class="restaurant-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span class="review-count">4.0/5 (315+ avis)</span>
+                    </div>
+                    <div class="restaurant-review">
+                        <p class="review-content">"Dans ce bistrot-cave de charme du passage des Panoramas, Simone Tondo joue une partition franco-italienne qui transforme ce bistrot parigot en osteria délicieuse. La cuisine italienne lumineuse de Simone Tondo dans un cadre à l'ancienne."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Restaurant 10 -->
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('images/saturne.jpg');"></div>
+                <div class="restaurant-content">
+                    <h2 class="restaurant-name">Saturne</h2>
+                    <span class="restaurant-cuisine">Gastronomique</span>
+                    <p class="restaurant-info">17 Rue Notre-Dame-des-Victoires, 75002 Paris</p>
+                    <div class="restaurant-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span class="review-count">4.1/5 (280+ avis)</span>
+                    </div>
+                    <div class="restaurant-review">
+                        <p class="review-content">"Saturne est un restaurant recommandable et nous y reviendrons vite. Pizzas et pâtes de qualité dans un joli cadre. Des prix qui ne sont pas excessifs pour un restaurant qui a reçu une étoile Michelin en 2016!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>À la découverte de la gastronomie parisienne - Mars 2025</p>
+    </footer>
+</body>
+</html>
